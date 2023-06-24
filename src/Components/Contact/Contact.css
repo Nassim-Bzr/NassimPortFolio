@@ -1,0 +1,113 @@
+.contact-form {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 15px;
+}
+
+.blue {
+  color: #3d71d8 !important;
+}
+
+.contactlogo {
+  margin-top: -1%;
+  width: 3rem;
+  height: 3rem;
+}
+.contact-form > h1 {
+  padding-top: 10%;
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 30px;
+}
+
+.FormDiv {
+  width: 100%;
+  display: flex;
+}
+
+.FormDiv-imagediv {
+  flex-basis: 50%;
+  padding: 50px;
+  height: auto;
+}
+
+.FormDiv-imagediv > img {
+  width: 100%;
+  margin: auto;
+  height: 300px;
+}
+
+.FormDiv-inputdiv {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.FormDiv-inputdiv > div {
+  flex-basis: 20%;
+  text-align: left;
+}
+
+.FormDiv-inputdiv > div > label {
+  margin-top: 5px;
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-left: 15%;
+}
+.FormDiv-inputdiv > div > input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 70%;
+  margin-top: 5px;
+  margin-left: 15%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.FormDiv-inputdiv > div > textarea {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 70%;
+  margin-top: 5px;
+  margin-left: 15%;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.inputdivButton {
+  margin-left: 45%;
+  font-size: 1.3rem;
+  font-weight: 800;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .FormDiv {
+    flex-direction: column;
+  }
+  .contact-form > h1 {
+    padding-top: 25%;
+  }
+  .FormDiv-inputdiv > div > label {
+    margin-left: 15%;
+  }
+  .FormDiv-inputdiv > div > input {
+    margin-left: 15%;
+  }
+  .FormDiv-inputdiv > div > textarea {
+    margin-left: 15%;
+  }
+  .inputdivButton {
+    margin-left: 40%;
+  }
+}
