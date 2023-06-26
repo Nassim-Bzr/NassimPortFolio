@@ -45,7 +45,7 @@ export const Projects = () => {
           </Col>
     
 
-          <Col md={6} className="project-card">
+        {/*   <Col md={6} className="project-card">
             <Card className="project-card-view" style={{ textAlign: "center" }}>
               <Card.Img variant="top" src={AtelierCombine} alt="Clockify Clone" />
               <Card.Body>
@@ -113,7 +113,7 @@ export const Projects = () => {
               </Card.Body>
             </Card>
           </Col>
-
+ */}
 
 
 
