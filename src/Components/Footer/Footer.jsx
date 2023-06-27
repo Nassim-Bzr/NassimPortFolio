@@ -1,13 +1,12 @@
 import React from "react";
-import { Row, Button } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import "./Footer.css";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram
+  AiOutlineTwitter
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import { GrResume } from "react-icons/gr";
+
 export const Footer = () => {
   return (
     <Row md={12} className="home-about-social">
@@ -28,7 +27,7 @@ export const Footer = () => {
           <a
             href="https://www.linkedin.com/in/nassim-bouzerara/"
             target="_blank"
-            rel="noreferrer"
+            rel="noreferr/*  */er"
             className="icon-colour home-social-icons"
           >
             <FaLinkedinIn />
