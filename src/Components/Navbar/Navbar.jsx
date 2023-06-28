@@ -72,7 +72,7 @@ export const Navbarjsx = () => {
     >
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} className="img-fluid logo" alt="Ps." />
+          {/* <img src={logo} className="img-fluid logo" alt="Ps." /> */}
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
