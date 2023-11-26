@@ -7,7 +7,7 @@ import "./Projects.css";
 // import FranckJezequel from "../Assets/FranckJezequel.png";
 import AtelierCombine from "../Assets/AtelierCombine.png";
 import WeatherApp from "../Assets/weatherApp.png";
-import TiLabel from "../Assets/TiLabel.png";
+import TiLabel from "../Assets/GoQuiz.png";
 
 
 import { DiReact, DiJavascript, DiGithubBadge, DiHtml5, DiPhotoshop, DiWordpress } from "react-icons/di";
@@ -25,24 +25,51 @@ export const Projects = () => {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
         <Col md={6} className="project-card" style={{ textAlign: "center" }}>
-            <Card className="project-card-view">
-              <Card.Img variant="top" src= {TiLabel}  alt="Weather App" />
-              <Card.Body>
-                <Card.Title style={{ fontWeight: "800" }}>
-                Logiciel d’étiquetage
-                </Card.Title>
-                <Card.Text style={{ textAlign: "justify" }}>
-                Réalisation d'un logiciel afin d'assurer une traçabilité de plusieurs produits
-                <p>Mise en place de bases de données pour permettre des mise à jour des références constructeur.</p>
-                < br/>
-                </Card.Text>
-                <div className="Techstacks">
-                Stack technique : Windev
-                </div>
-                
-              </Card.Body>
-            </Card>
-          </Col>
+  <Card className="project-card-view">
+    <Card.Img variant="top" src={TiLabel} alt="Application de quiz" />
+    <Card.Body>
+      <Card.Title style={{ fontWeight: "800" }}>
+        Application de quiz
+      </Card.Title>
+      <Card.Text style={{ textAlign: "justify" }}>
+
+       <br/>
+        J'ai réalisé seul une application de quiz qui permet aux utilisateurs de tester leurs connaissances dans différents domaines.
+
+        <br/>
+       <br/>
+        L'application propose une large gamme de quiz dans diverses catégories. Les utilisateurs peuvent sélectionner un quiz de leur choix et répondre à une série de questions.
+
+       <br/>
+       <br/>
+      
+
+        L'application offre une expérience interactive avec des fonctionnalités telles qu'un compte à rebours pour chaque question, un affichage des scores en temps réel et la possibilité de passer à la question suivante. À la fin du quiz, les utilisateurs peuvent voir leur score final et évaluer leurs performances.
+
+        <br/>
+       <br/>
+
+        Grâce à cette application de quiz, les utilisateurs peuvent non seulement s'amuser et tester leurs connaissances, mais aussi apprendre de nouvelles informations et développer leurs compétences dans différents domaines.
+
+      </Card.Text>
+      <div className="Techstacks">
+        Stack technique : React JS & Redux côté front ,
+       <br/> Node JS PostgreSQL côté back.
+      </div>
+      
+     <Button
+                  variant="primary"
+                  href="git@github.com:Nassim-Bzr/Apo-Quiz.git"
+                  target="_blank"
+                  style={{ marginTop: "5%" }}
+                >
+                  {" "}
+                  <DiGithubBadge /> Github
+                </Button>
+    </Card.Body>
+  </Card>
+</Col>
+
     
 
         {/*   <Col md={6} className="project-card">
@@ -92,15 +119,15 @@ export const Projects = () => {
                   <FaCss3 className="Techstacks-icons" />
                   <DiJavascript className="Techstacks-icons" />
                 </div>
-                <Button
-                  variant="primary"
-                  href="https://github.com/Vincent-PERON/Ti-Weather"
-                  target="_blank"
-                  style={{ marginTop: "5%" }}
-                >
-                  {" "}
-                  <DiGithubBadge /> Github
-                </Button>
+                // <Button
+                //   variant="primary"
+                //   href="https://github.com/Vincent-PERON/Ti-Weather"
+                //   target="_blank"
+                //   style={{ marginTop: "5%" }}
+                // >
+                //   {" "}
+                //   <DiGithubBadge /> Github
+                // </Button>
                 <Button
                   variant="primary"
                   style={{ marginLeft: "5%", marginTop: "5%" }}

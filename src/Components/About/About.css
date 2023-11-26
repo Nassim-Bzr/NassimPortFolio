@@ -48,6 +48,12 @@
   text-align: left !important;
   padding-left: 1px !important;
 }
+.about-img img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
 
 @media (max-width: 767px) {
   .about-img {

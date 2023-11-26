@@ -115,7 +115,7 @@ export const Navbarjsx = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-            <Nav.Link href="https://drive.google.com/file/d/10FTPOxaG-ONAIw6WLwwAORTIXaOKewcw/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+            <Nav.Link href="https://drive.google.com/file/d/1RcQaDICSeCQlabthKJYvf78gZ8gVQH9o/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
   <CgFileDocument style={{ marginBottom: "2px" }} /> Mon CV
 </Nav.Link>
 
