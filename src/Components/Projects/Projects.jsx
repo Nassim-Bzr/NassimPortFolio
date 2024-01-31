@@ -59,7 +59,7 @@ export const Projects = () => {
       
      <Button
                   variant="primary"
-                  href="git@github.com:Nassim-Bzr/Apo-Quiz.git"
+                  href="https://github.com/Nassim-Bzr/Apo-Quiz"
                   target="_blank"
                   style={{ marginTop: "5%" }}
                 >
