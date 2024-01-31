@@ -37,7 +37,7 @@
   }
 }
 #tsparticles {
-  position: fixed !important;
+  position: absolute;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   width: 100%;
