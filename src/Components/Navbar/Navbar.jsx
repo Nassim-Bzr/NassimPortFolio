@@ -8,15 +8,13 @@ import "./Navbar.css";
 import { useHistory } from "react-router-dom";
 import { downloadCV } from "../utils"; // Importer la fonction de téléchargement
 
-
-import { CgFileDocument } from "react-icons/cg";
-
 import {
+  CgFileDocument,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
   AiOutlineContacts
-} from "react-icons/ai";
+} from "react-icons/all";
 
 export const Navbarjsx = () => {
   const [expand, setexpand] = React.useState(false);
@@ -113,13 +111,22 @@ export const Navbarjsx = () => {
                 />{" "}
                 Projets
               </Nav.Link>
+
             </Nav.Item>
             <Nav.Item>
-            <Nav.Link href="https://drive.google.com/file/d/1RcQaDICSeCQlabthKJYvf78gZ8gVQH9o/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-  <CgFileDocument style={{ marginBottom: "2px" }} /> Mon CV
-</Nav.Link>
-
-    </Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => handleNavLinkClick("#contact")}
+              >
+                <AiOutlineContacts style={{ marginBottom: "2px" }} /> Contact
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="https://drive.google.com/file/d/1RcQaDICSeCQlabthKJYvf78gZ8gVQH9o/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Mon CV
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>

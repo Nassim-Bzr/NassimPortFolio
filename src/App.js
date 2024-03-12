@@ -7,6 +7,7 @@ import { Preloader } from "./Components/Pre";
 import { About } from "./Components/About/About";
 import { Projects } from "./Components/Projects/Projects";
 import { Footer } from "./Components/Footer/Footer";
+import { Contact } from "./Components/Contact/Contact";
 
 export default function App() {
   const [load, setload] = React.useState(false);
@@ -30,6 +31,9 @@ export default function App() {
         </section>
         <section id="#projects">
           <Projects />
+        </section>
+        <section id="#contact">
+          <Contact />
         </section>
         <section id="#resume">
           <Footer />
