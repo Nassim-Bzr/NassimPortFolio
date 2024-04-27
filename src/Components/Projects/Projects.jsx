@@ -6,7 +6,7 @@ import "./Projects.css";
 // import OlivierRoue from "../Assets/OlivierRoue.png";
 // import FranckJezequel from "../Assets/FranckJezequel.png";
 import AtelierCombine from "../Assets/AtelierCombine.png";
-import WeatherApp from "../Assets/weatherApp.png";
+import MegaBonPlan from "../Assets/megabonplan.png";
 import TiLabel from "../Assets/GoQuiz.png";
 
 
@@ -68,7 +68,37 @@ export const Projects = () => {
                 </Button>
     </Card.Body>
   </Card>
+  
 </Col>
+<Col md={6} className="project-card">
+    <Card className="project-card-view">
+      <Card.Img variant="top" src={MegaBonPlan} alt="Weather App" />
+      <Card.Body>
+        <Card.Title style={{ fontWeight: "800" }}>
+          Application Web- Partage de bon plans
+        </Card.Title>
+        <Card.Text style={{ textAlign: "justify" }}>
+          Les utilisateurs peuvent utiliser ou poster des bon plans en y ajoutant leurs liens d'affiliations 
+        </Card.Text>
+        <div className="Techstacks">
+          <DiHtml5 className="Techstacks-icons" />
+          <FaCss3 className="Techstacks-icons" />
+          <DiJavascript className="Techstacks-icons" />
+          <DiReact className="Techstacks-icons"/>
+
+        </div>
+        <Button
+                  variant="primary"
+                  href="https://github.com/Nassim-Bzr/Megabonplan"
+                  target="_blank"
+                  style={{ marginLeft: "50%", marginRight:"50%" , marginTop:"20%", widht:"100%" }}
+                >
+                  {" "}
+                  <DiGithubBadge /> Github
+                </Button>
+      </Card.Body>
+    </Card>
+  </Col>
 
     
 
