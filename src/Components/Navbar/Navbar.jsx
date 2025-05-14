@@ -24,7 +24,7 @@ export const Navbarjsx = () => {
   const history = useHistory();
 
   const handleCVDownload = () => {
-    downloadCV(); // Appeler la fonction de téléchargement lorsque le lien est cliqué
+    alert("Nouveau CV en préparation. Merci de votre patience."); // Alert pour informer que le CV est en préparation
     setexpand(false);
   };
 
@@ -123,8 +123,13 @@ export const Navbarjsx = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="https://drive.google.com/file/d/1RcQaDICSeCQlabthKJYvf78gZ8gVQH9o/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Mon CV
+              <Nav.Link 
+                href="#" 
+                onClick={(e) => { e.preventDefault(); handleCVDownload(); }}
+                style={{ color: "#623686", display: "flex", alignItems: "center" }}
+              >
+                <CgFileDocument style={{ marginBottom: "2px", marginRight: "5px" }} /> 
+                CV <span style={{ fontSize: "0.8em", marginLeft: "5px", border: "1px solid #623686", borderRadius: "4px", padding: "1px 4px" }}>En préparation</span>
               </Nav.Link>
             </Nav.Item>
           </Nav>
