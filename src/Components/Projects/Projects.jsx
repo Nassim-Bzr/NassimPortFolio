@@ -8,11 +8,15 @@ import "./Projects.css";
 import AtelierCombine from "../Assets/AtelierCombine.png";
 import MegaBonPlan from "../Assets/megabonplan.png";
 import TiLabel from "../Assets/GoQuiz.png";
+import LivenceHome from "../Assets/LivenceHome.png";
+import Obonnesaffaires from "../Assets/Obackti.jpg";
+import SajMeta from "../Assets/sajmeta.jpg";
+import AiCoach from "../Assets/Aicoach.png";
 
 
-import { DiReact, DiJavascript, DiGithubBadge, DiHtml5, DiPhotoshop, DiWordpress } from "react-icons/di";
-import { SiRedux, SiMaterialUi } from "react-icons/si";
-import { FaLink, FaCss3 } from "react-icons/fa";
+import { DiReact, DiJavascript, DiGithubBadge, DiHtml5, DiPhotoshop, DiWordpress, DiNodejs } from "react-icons/di";
+import { SiRedux, SiMaterialUi, SiTailwindcss, SiPostgresql, SiTypescript } from "react-icons/si";
+import { FaLink, FaCss3, FaServer, FaMedkit, FaCalendarAlt, FaRobot, FaCode, FaDatabase } from "react-icons/fa";
 export const Projects = () => {
   return (
     <Container fluid className="project-section">
@@ -23,6 +27,236 @@ export const Projects = () => {
         </h1>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+          <Card className="project-card-view">
+            <Card.Img variant="top" src={AiCoach} alt="AI Recruteur Coach" />
+            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+              En développement
+            </div>
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                AI Recruteur Coach - Simulateur d'entretien IA
+              </Card.Title>
+              <Card.Text style={{ textAlign: "justify" }}>
+                <br/>
+                AI Recruteur Coach est un outil innovant qui permet aux candidats de simuler des entretiens d'embauche
+                avec une intelligence artificielle conçue pour reproduire le comportement d'un recruteur.
+                <br/>
+                <br/>
+                Fonctionnalités principales :
+                <br/>
+                • Simulation d'entretien en temps réel avec IA
+                <br/>
+                • Feedback instantané sur vos réponses
+                <br/>
+                • Suivi de votre progression et historique d'entretiens
+                <br/>
+                • Interface intuitive et responsive
+                <br/>
+                • Authentification et espace personnel
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React, TypeScript, Tailwind CSS, API IA, Backend Node.js
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <SiTypescript className="Techstacks-icons" />
+                  <SiTailwindcss className="Techstacks-icons" />
+                  <FaRobot className="Techstacks-icons" />
+                  <DiNodejs className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
+                <Button
+                  variant="primary"
+                  href="https://github.com/Nassim-Bzr/AiCoachRecrut"
+                  target="_blank"
+                >
+                  {" "}
+                  <DiGithubBadge /> Frontend
+                </Button>
+                <Button
+                  variant="primary"
+                  href="https://github.com/Nassim-Bzr/Back-AiCoachJob"
+                  target="_blank"
+                >
+                  {" "}
+                  <FaDatabase /> Backend
+                </Button>
+                <Button
+                  variant="primary"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  style={{ opacity: "0.7", cursor: "not-allowed" }}
+                >
+                  {" "}
+                  <FaCode /> En développement
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+          <Card className="project-card-view">
+            <Card.Img variant="top" src={SajMeta} alt="Saj Meta Deal" />
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                Saj Meta Deal - Plateforme de formations médicales
+              </Card.Title>
+              <Card.Text style={{ textAlign: "justify" }}>
+                <br/>
+                Saj Meta Deal est une plateforme spécialisée dans les formations DPC (Développement Professionnel Continu) 
+                pour les professionnels de santé. Le site propose un catalogue complet de formations adaptées à différentes 
+                spécialités médicales.
+                <br/>
+                <br/>
+                Fonctionnalités principales :
+                <br/>
+                • Catalogue de formations par spécialité (Médecine Générale, Chirurgien-dentiste, Infirmier, etc.)
+                <br/>
+                • Système de réservation de sessions avec calendrier intégré
+                <br/>
+                • Formations disponibles en plusieurs formats (présentiel, e-learning, hybride)
+                <br/>
+                • Information détaillée sur les prix, durées et indemnisations
+                <br/>
+                • Système de newsletter et de contact
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React, TypeScript, CSS, Vercel
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <SiTypescript className="Techstacks-icons" />
+                  <FaCss3 className="Techstacks-icons" />
+                  <FaMedkit className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <Button
+                variant="primary"
+                href="https://github.com/Nassim-Bzr/Saj-Web"
+                target="_blank"
+                style={{ marginTop: "5%" }}
+              >
+                {" "}
+                <DiGithubBadge /> Github
+              </Button>
+              <Button
+                variant="primary"
+                href="https://saj-web-8596.vercel.app/formations"
+                target="_blank"
+                style={{ marginLeft: "5%", marginTop: "5%" }}
+              >
+                {" "}
+                <FaLink /> Voir le site
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+          <Card className="project-card-view">
+            <Card.Img variant="top" src={LivenceHome} alt="Livence Project Booking" />
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                Livence - Plateforme de réservation
+              </Card.Title>
+              <Card.Text style={{ textAlign: "justify" }}>
+                <br/>
+                Livence est une application de réservation en ligne qui permet aux utilisateurs de réserver 
+                facilement des services. La plateforme offre une interface intuitive pour la recherche et 
+                la réservation.
+                <br/>
+                <br/>
+                Les utilisateurs peuvent parcourir les services disponibles, consulter les détails et effectuer 
+                des réservations en quelques clics. Le système gère également les paiements et les confirmations.
+                <br/>
+                <br/>
+                Le projet inclut un système d'authentification sécurisé, un tableau de bord utilisateur 
+                pour gérer les réservations, et une interface d'administration pour les prestataires de services.
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React JS, Tailwind CSS côté front,
+                <br/> Node JS, PostgreSQL côté back.
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <SiTailwindcss className="Techstacks-icons" />
+                  <DiNodejs className="Techstacks-icons" />
+                  <SiPostgresql className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <Button
+                variant="primary"
+                href="https://github.com/Nassim-Bzr/LivenceProjectBooking"
+                target="_blank"
+                style={{ marginTop: "5%" }}
+              >
+                {" "}
+                <DiGithubBadge /> Github
+              </Button>
+              <Button
+                variant="primary"
+                href="https://www.livence.fr/"
+                target="_blank"
+                style={{ marginLeft: "5%", marginTop: "5%" }}
+              >
+                {" "}
+                <FaLink /> Voir le site
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+          <Card className="project-card-view">
+            <Card.Img variant="top" src={Obonnesaffaires} alt="Obonnesaffaires E-commerce" />
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                Obonnesaffaires - Site E-commerce
+              </Card.Title>
+              <Card.Text style={{ textAlign: "justify" }}>
+                <br/>
+                Obonnesaffaires est une plateforme e-commerce développée en collaboration via Git. Le site 
+                propose une expérience d'achat en ligne simple et efficace pour les consommateurs.
+                <br/>
+                <br/>
+                Fonctionnalités principales :
+                <br/>
+                • Catalogue de produits avec filtres et recherche
+                <br/>
+                • Système de panier et de commande
+                <br/>
+                • Paiement sécurisé
+                <br/>
+                • Espace client pour suivre les commandes
+                <br/>
+                • Interface administrateur pour la gestion des produits et des commandes
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React JS, CSS, Node.js, MongoDB
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <FaCss3 className="Techstacks-icons" />
+                  <DiNodejs className="Techstacks-icons" />
+                  <DiJavascript className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <Button
+                variant="primary"
+                href="https://obonnesaffaires.fr/"
+                target="_blank"
+                style={{ marginTop: "5%" }}
+              >
+                {" "}
+                <FaLink /> Voir le site
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
 
         <Col md={6} className="project-card" style={{ textAlign: "center" }}>
   <Card className="project-card-view">
@@ -43,18 +277,23 @@ export const Projects = () => {
        <br/>
        <br/>
       
-
-        L'application offre une expérience interactive avec des fonctionnalités telles qu'un compte à rebours pour chaque question, un affichage des scores en temps réel et la possibilité de passer à la question suivante. À la fin du quiz, les utilisateurs peuvent voir leur score final et évaluer leurs performances.
+        Une fonctionnalité phare est le mode "joueur contre joueur" qui permet aux utilisateurs de défier leurs amis en temps réel. Les joueurs peuvent créer des salles privées et participer à des compétitions avec un système de classement intégré.
 
         <br/>
        <br/>
 
-        Grâce à cette application de quiz, les utilisateurs peuvent non seulement s'amuser et tester leurs connaissances, mais aussi apprendre de nouvelles informations et développer leurs compétences dans différents domaines.
+        L'application offre également une expérience interactive avec des fonctionnalités telles qu'un compte à rebours pour chaque question, un affichage des scores en temps réel, et un mode tournoi pour des compétitions à plus grande échelle.
 
       </Card.Text>
       <div className="Techstacks">
         Stack technique : React JS & Redux côté front ,
        <br/> Node JS PostgreSQL côté back.
+       <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+          <DiReact className="Techstacks-icons" />
+          <SiRedux className="Techstacks-icons" />
+          <DiNodejs className="Techstacks-icons" />
+          <SiPostgresql className="Techstacks-icons" />
+        </div>
       </div>
       
      <Button
@@ -72,26 +311,42 @@ export const Projects = () => {
 </Col>
 <Col md={6} className="project-card">
     <Card className="project-card-view">
-      <Card.Img variant="top" src={MegaBonPlan} alt="Weather App" />
+      <Card.Img variant="top" src={MegaBonPlan} alt="MegaBonPlan" />
       <Card.Body>
         <Card.Title style={{ fontWeight: "800" }}>
-          Application Web- Partage de bon plans
+          MegaBonPlan - Partage de bons plans
         </Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
-          Les utilisateurs peuvent utiliser ou poster des bon plans en y ajoutant leurs liens d'affiliations 
+          <br/>
+          Inspiré de Dealabs, MegaBonPlan est une plateforme communautaire où les utilisateurs peuvent partager et découvrir des bons plans, codes promo et offres spéciales.
+          <br/>
+          <br/>
+          Fonctionnalités principales :
+          <br/>
+          • Système de vote permettant à la communauté de faire remonter les meilleurs deals
+          <br/>
+          • Alertes personnalisées pour les offres correspondant aux centres d'intérêt des utilisateurs
+          <br/>
+          • Commentaires et discussions sur chaque bon plan
+          <br/>
+          • Section "Deals à ne pas manquer" mise en avant sur la page d'accueil
+          <br/>
+          • Possibilité d'ajouter des liens d'affiliation pour les utilisateurs contributeurs
         </Card.Text>
         <div className="Techstacks">
-          <DiHtml5 className="Techstacks-icons" />
-          <FaCss3 className="Techstacks-icons" />
-          <DiJavascript className="Techstacks-icons" />
-          <DiReact className="Techstacks-icons"/>
-
+          Stack technique : React JS, HTML, CSS, JavaScript
+          <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+            <DiReact className="Techstacks-icons" />
+            <DiHtml5 className="Techstacks-icons" />
+            <FaCss3 className="Techstacks-icons" />
+            <DiJavascript className="Techstacks-icons" />
+          </div>
         </div>
         <Button
                   variant="primary"
                   href="https://github.com/Nassim-Bzr/Megabonplan"
                   target="_blank"
-                  style={{ marginLeft: "50%", marginRight:"50%" , marginTop:"20%", widht:"100%" }}
+                  style={{ marginTop: "5%" }}
                 >
                   {" "}
                   <DiGithubBadge /> Github
@@ -140,9 +395,9 @@ export const Projects = () => {
                 Application Web- Affichage météo selon la ville
                 </Card.Title>
                 <Card.Text style={{ textAlign: "justify" }}>
-                Le weatherApp permet d’afficher la météo du jour + les prévisions à 5 jours.
+                Le weatherApp permet d'afficher la météo du jour + les prévisions à 5 jours.
                 Application développée pour un affichage dynamique.
-                Pour afficher la météo de votre ville il suffit de modifier le nom de la ville dans l’url.
+                Pour afficher la météo de votre ville il suffit de modifier le nom de la ville dans l'url.
                 </Card.Text>
                 <div className="Techstacks">
                   <DiHtml5 className="Techstacks-icons" />
