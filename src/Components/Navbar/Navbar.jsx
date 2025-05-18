@@ -24,7 +24,7 @@ export const Navbarjsx = () => {
   const history = useHistory();
 
   const handleCVDownload = () => {
-    alert("Nouveau CV en préparation. Merci de votre patience."); // Alert pour informer que le CV est en préparation
+    downloadCV(); // Appeler la fonction de téléchargement du CV
     setexpand(false);
   };
 
@@ -129,7 +129,7 @@ export const Navbarjsx = () => {
                 style={{ color: "#623686", display: "flex", alignItems: "center" }}
               >
                 <CgFileDocument style={{ marginBottom: "2px", marginRight: "5px" }} /> 
-                CV <span style={{ fontSize: "0.8em", marginLeft: "5px", border: "1px solid #623686", borderRadius: "4px", padding: "1px 4px" }}>En préparation</span>
+                CV
               </Nav.Link>
             </Nav.Item>
           </Nav>

@@ -19,6 +19,7 @@
   box-shadow: 4px 5px 4px 3px rgba(91, 155, 228, 0.959) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+  position: relative !important;
 }
 
 @media (max-width: 767px) {
@@ -32,6 +33,29 @@
   overflow: hidden !important;
   border: 2.2px solid rgba(91, 155, 228, 0.959) !important;
 }
+
+.tech-icons::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(91, 155, 228, 0.9);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tech-icons:hover::after {
+  opacity: 1;
+}
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
