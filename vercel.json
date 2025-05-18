@@ -14,8 +14,16 @@
     { "handle": "filesystem" },
     { "src": "/static/(.*)", "dest": "/static/$1" },
     { "src": "/favicon.ico", "dest": "/favicon.ico" },
-    { "src": "/asset-manifest.json", "dest": "/asset-manifest.json" },
-    { "src": "/manifest.json", "dest": "/manifest.json" },
+    { 
+      "src": "/asset-manifest.json", 
+      "dest": "/asset-manifest.json",
+      "headers": { "Content-Type": "application/json" }
+    },
+    { 
+      "src": "/manifest.json", 
+      "dest": "/manifest.json",
+      "headers": { "Content-Type": "application/json" }
+    },
     { "src": "/precache-manifest.(.*)", "dest": "/precache-manifest.$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
