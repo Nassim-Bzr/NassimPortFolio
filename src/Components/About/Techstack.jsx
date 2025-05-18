@@ -13,7 +13,19 @@ import {
   DiWordpress
 } from "react-icons/di";
 
-import { SiRedux } from "react-icons/si";
+import { 
+  SiRedux, 
+  SiTailwindcss, 
+  SiTypescript 
+} from "react-icons/si";
+
+import {
+  FaDatabase,
+  FaServer,
+  FaCode,
+  FaGithub,
+  FaCloudUploadAlt
+} from "react-icons/fa";
 
 export const TechStack = () => {
   return (
@@ -50,12 +62,20 @@ export const TechStack = () => {
         <DiMongodb />
       </Col>
 
-      <Col xs={4} md={2} className="tech-icons" title="Git/GitHub">
-        <DiGit />
+      <Col xs={4} md={2} className="tech-icons" title="TypeScript">
+        <SiTypescript />
       </Col>
 
-      <Col xs={4} md={2} className="tech-icons" title="Wordpress">
-        <DiWordpress />
+      <Col xs={4} md={2} className="tech-icons" title="TailwindCSS">
+        <SiTailwindcss />
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons" title="Vercel/Déploiement">
+        <FaCloudUploadAlt />
+      </Col>
+
+      <Col xs={4} md={2} className="tech-icons" title="Git/GitHub">
+        <FaGithub />
       </Col>
     </Row>
   );

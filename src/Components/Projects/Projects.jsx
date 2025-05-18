@@ -13,11 +13,12 @@ import Obonnesaffaires from "../Assets/Obackti.jpg";
 import SajMeta from "../Assets/sajmeta.jpg";
 import AiCoach from "../Assets/Aicoach.png";
 import StopAddict from "../Assets/StopAddict.png";
+import Laptop from "../Assets/laptop.png";
 
 
 import { DiReact, DiJavascript, DiGithubBadge, DiHtml5, DiPhotoshop, DiWordpress, DiNodejs } from "react-icons/di";
 import { SiRedux, SiMaterialUi, SiTailwindcss, SiPostgresql, SiTypescript } from "react-icons/si";
-import { FaLink, FaCss3, FaServer, FaMedkit, FaCalendarAlt, FaRobot, FaCode, FaDatabase, FaUsers } from "react-icons/fa";
+import { FaLink, FaCss3, FaServer, FaMedkit, FaCalendarAlt, FaRobot, FaCode, FaDatabase, FaUsers, FaSearch, FaHome, FaUtensils, FaBriefcase, FaShoppingCart } from "react-icons/fa";
 export const Projects = () => {
   return (
     <Container fluid className="project-section">
@@ -31,7 +32,12 @@ export const Projects = () => {
 
         <Col md={6} className="project-card" style={{ textAlign: "center" }}>
           <Card className="project-card-view">
-            <Card.Img variant="top" src={StopAddict} alt="Stop Addict" />
+            <Card.Img 
+              variant="top" 
+              src={StopAddict} 
+              alt="Stop Addict" 
+              style={{ maxHeight: "300px", objectFit: "contain" }}
+            />
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 Stop Addict - Application d'aide au sevrage
@@ -84,6 +90,338 @@ export const Projects = () => {
                 {" "}
                 <FaLink /> Télécharger
               </Button>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+          <Card className="project-card-view">
+            <Card.Img 
+              variant="top" 
+              src={Laptop} 
+              alt="LeBonCoinAi" 
+              style={{ maxHeight: "300px", objectFit: "contain" }}
+            />
+            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+              En développement
+            </div>
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                LeBonCoinAi - Recherche d'annonces automatisée
+              </Card.Title>
+              <Card.Text style={{ textAlign: "justify" }}>
+                <br/>
+                LeBoncoin AI est une application intelligente qui automatise la recherche de petites annonces selon des critères avancés 
+                (ex : Renault Clio noire, diesel, &lt;150 000 km, rayon 50 km).
+                <br/>
+                <br/>
+                Fonctionnalités principales :
+                <br/>
+                • Scraping intelligent des nouvelles annonces
+                <br/>
+                • Analyse et filtrage des contenus selon critères précis
+                <br/>
+                • Détection des bonnes opportunités
+                <br/>
+                • Envoi automatisé de messages aux vendeurs
+                <br/>
+                • Alertes par email ou SMS avec photos et liens
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : Python, Node.js, React, API IA
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <DiNodejs className="Techstacks-icons" />
+                  <FaSearch className="Techstacks-icons" />
+                  <FaRobot className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
+                <Button
+                  variant="primary"
+                  href="#"
+                  target="_blank"
+                >
+                  {" "}
+                  <DiGithubBadge /> Github
+                </Button>
+                <Button
+                  variant="primary"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  style={{ opacity: "0.7", cursor: "not-allowed" }}
+                >
+                  {" "}
+                  <FaCode /> En développement
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+          <Card className="project-card-view">
+            <Card.Img 
+              variant="top" 
+              src={Laptop} 
+              alt="Smoobu V2" 
+              style={{ maxHeight: "300px", objectFit: "contain" }}
+            />
+            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+              En développement
+            </div>
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                Smoobu V2 - Gestion immobilière courte durée
+              </Card.Title>
+              <Card.Text style={{ textAlign: "justify" }}>
+                <br/>
+                Smoobu V2 est un outil de gestion immobilière courte durée, inspiré de Smoobu mais repensé pour les 
+                propriétaires ou gestionnaires d'appartements.
+                <br/>
+                <br/>
+                Fonctionnalités principales :
+                <br/>
+                • Gestion des réservations multicanaux (Airbnb, Booking, etc.)
+                <br/>
+                • Synchronisation des calendriers
+                <br/>
+                • Gestion des femmes de ménage
+                <br/>
+                • Suivi des statistiques et performances
+                <br/>
+                • Attribution de rôles aux utilisateurs (admin, collaborateur, cleaner)
+                <br/>
+                • Modules IA pour automatiser messages et suggestions
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React, Node.js, SQL, API IA
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <DiNodejs className="Techstacks-icons" />
+                  <FaHome className="Techstacks-icons" />
+                  <FaDatabase className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
+                <Button
+                  variant="primary"
+                  href="#"
+                  target="_blank"
+                >
+                  {" "}
+                  <DiGithubBadge /> Github
+                </Button>
+                <Button
+                  variant="primary"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  style={{ opacity: "0.7", cursor: "not-allowed" }}
+                >
+                  {" "}
+                  <FaCode /> En développement
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+          <Card className="project-card-view">
+            <Card.Img 
+              variant="top" 
+              src={Laptop} 
+              alt="CheckCalories" 
+              style={{ maxHeight: "300px", objectFit: "contain" }}
+            />
+            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+              En développement
+            </div>
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                CheckCalories - Suivi alimentaire par IA
+              </Card.Title>
+              <Card.Text style={{ textAlign: "justify" }}>
+                <br/>
+                CheckCalories est une application IA qui permet de suivre son alimentation grâce à la reconnaissance 
+                visuelle et à l'analyse textuelle.
+                <br/>
+                <br/>
+                Fonctionnalités principales :
+                <br/>
+                • Reconnaissance visuelle des aliments par photo
+                <br/>
+                • Analyse textuelle des repas décrits
+                <br/>
+                • Estimation des calories et apports nutritionnels (protéines, sucre, gras)
+                <br/>
+                • Rapports nutritionnels journaliers
+                <br/>
+                • Conseils personnalisés et suivi de l'évolution
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React Native, Node.js, Computer Vision, NLP
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <DiNodejs className="Techstacks-icons" />
+                  <FaUtensils className="Techstacks-icons" />
+                  <FaRobot className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
+                <Button
+                  variant="primary"
+                  href="#"
+                  target="_blank"
+                >
+                  {" "}
+                  <DiGithubBadge /> Github
+                </Button>
+                <Button
+                  variant="primary"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  style={{ opacity: "0.7", cursor: "not-allowed" }}
+                >
+                  {" "}
+                  <FaCode /> En développement
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+          <Card className="project-card-view">
+            <Card.Img 
+              variant="top" 
+              src={Laptop} 
+              alt="AutoJobAI" 
+              style={{ maxHeight: "300px", objectFit: "contain" }}
+            />
+            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+              En développement
+            </div>
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                AutoJobAI - Assistant recherche d'emploi intelligent
+              </Card.Title>
+              <Card.Text style={{ textAlign: "justify" }}>
+                <br/>
+                AutoJobAI est une application qui analyse un CV, détecte les compétences clés, et cherche automatiquement 
+                des offres d'alternance ou d'emploi correspondant au profil.
+                <br/>
+                <br/>
+                Fonctionnalités principales :
+                <br/>
+                • Analyse intelligente de CV et détection des compétences
+                <br/>
+                • Recherche automatisée via scraping ou APIs (Welcome to the Jungle, LinkedIn)
+                <br/>
+                • Candidature automatique avec mail généré par IA
+                <br/>
+                • Récapitulatif quotidien des candidatures
+                <br/>
+                • Suivi des statuts des candidatures
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React, Node.js, API IA, NLP
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <DiNodejs className="Techstacks-icons" />
+                  <FaBriefcase className="Techstacks-icons" />
+                  <FaRobot className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
+                <Button
+                  variant="primary"
+                  href="#"
+                  target="_blank"
+                >
+                  {" "}
+                  <DiGithubBadge /> Github
+                </Button>
+                <Button
+                  variant="primary"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  style={{ opacity: "0.7", cursor: "not-allowed" }}
+                >
+                  {" "}
+                  <FaCode /> En développement
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+          <Card className="project-card-view">
+            <Card.Img 
+              variant="top" 
+              src={Laptop} 
+              alt="IA Coach Revente" 
+              style={{ maxHeight: "300px", objectFit: "contain" }}
+            />
+            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+              En développement
+            </div>
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                IA Coach Revente - Assistant de vente d'occasion
+              </Card.Title>
+              <Card.Text style={{ textAlign: "justify" }}>
+                <br/>
+                IA Coach Revente est une app qui aide les particuliers à estimer la valeur d'un objet qu'ils souhaitent 
+                revendre (voiture, objet tech, vêtement, etc.).
+                <br/>
+                <br/>
+                Fonctionnalités principales :
+                <br/>
+                • Estimation du prix de revente via analyse de marché
+                <br/>
+                • Rédaction automatique d'annonces optimisées
+                <br/>
+                • Suggestion de mots-clés pertinents
+                <br/>
+                • Recommandation des plateformes idéales (Leboncoin, Vinted, eBay...)
+                <br/>
+                • Conseils pour vendre rapidement au bon prix
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React, Node.js, API IA, NLP
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <DiNodejs className="Techstacks-icons" />
+                  <FaShoppingCart className="Techstacks-icons" />
+                  <FaRobot className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
+                <Button
+                  variant="primary"
+                  href="#"
+                  target="_blank"
+                >
+                  {" "}
+                  <DiGithubBadge /> Github
+                </Button>
+                <Button
+                  variant="primary"
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  style={{ opacity: "0.7", cursor: "not-allowed" }}
+                >
+                  {" "}
+                  <FaCode /> En développement
+                </Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
@@ -496,3 +834,4 @@ export const Projects = () => {
     </Container>
   );
 };
+
