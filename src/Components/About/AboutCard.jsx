@@ -1,26 +1,53 @@
 import React from "react";
 import "./About.css";
 import { Card } from "react-bootstrap";
+import { FaBriefcase, FaGraduationCap, FaLaptopCode, FaUserAlt, FaRegLightbulb } from "react-icons/fa";
+
 export const AboutCard = () => {
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <div style={{ textAlign: "justify" }}>
-            Véritable adepte de  <span className="purple">nouvelles technologies</span>, je cherche constamment à monter en compétence. 
+          <div style={{ textAlign: "left" }}>
+            <p style={{ fontSize: "1.2rem", marginBottom: "25px" }}>
+              <FaUserAlt style={{ marginRight: "10px", color: "#4cc9f0" }} />
+              Développeur passionné et polyvalent, je construis des projets qui mêlent technologie, utilité et vision produit.
+            </p>
             
-            <p>Je suis passionné par le développement web ( front avec React, back avec Node.Js ), le webdesign et le montage vidéo.</p>
+            <p className="highlight-point">
+              <FaLaptopCode style={{ marginRight: "10px", fontSize: "1.2rem" }} />
+              Mon parcours m'amène à explorer tout ce qui peut avoir de l'impact : <span className="purple">React</span>, Python, PHP, IA, automatisation, scraping, data, design, ou encore DevOps. Je n'ai pas de stack figée : je choisis les bons outils pour chaque idée.
+            </p>
           
-            <p>Je suis constamment à l'affût des dernières tendances et des meilleures pratiques en matière de développement web. J'aime explorer de nouvelles bibliothèques et frameworks pour améliorer mes compétences et rester à jour dans un domaine en constante évolution.</p>
+            <p style={{ lineHeight: "1.7" }}>
+              <FaBriefcase style={{ marginRight: "10px", color: "#4cc9f0" }} />
+              Je travaille actuellement sur plusieurs applications concrètes autour de l'intelligence artificielle, de l'automatisation de tâches, de la productivité et de l'expérience utilisateur :
+            </p>
             
-            <p>En plus de mes compétences techniques, je suis également un communicateur efficace et un bon collaborateur. J'apprécie travailler en équipe, échanger des idées et trouver des solutions créatives aux défis auxquels nous sommes confrontés.</p>
+            <ul style={{ listStyleType: "none", paddingLeft: "25px", marginBottom: "20px", lineHeight: "1.8" }}>
+              <li style={{ marginBottom: "8px" }}><span style={{ color: "#4cc9f0", marginRight: "10px" }}>→</span> Simulateur d'entretien IA</li>
+              <li style={{ marginBottom: "8px" }}><span style={{ color: "#4cc9f0", marginRight: "10px" }}>→</span> Moteur de recherche intelligent</li>
+              <li style={{ marginBottom: "8px" }}><span style={{ color: "#4cc9f0", marginRight: "10px" }}>→</span> Coach de revente</li>
+              <li><span style={{ color: "#4cc9f0", marginRight: "10px" }}>→</span> Plateforme de gestion immobilière</li>
+            </ul>
+            
+            <p>
+              <FaGraduationCap style={{ marginRight: "10px", color: "#4cc9f0" }} />
+              Je prépare un mastère en <span className="purple">Développement IA & Big Data</span>, avec un objectif clair :
+            </p>
 
-
-            <p>Enfin, je suis passionné par l'apprentissage continu et je suis toujours prêt à relever de nouveaux défis. Je suis ouvert aux nouvelles opportunités qui me permettront de développer mes compétences et de contribuer à des projets innovants et passionnants.</p>
+            <p className="highlight-point" style={{ fontWeight: "600", textAlign: "center", padding: "20px" }}>
+              <FaRegLightbulb style={{ marginRight: "10px", fontSize: "1.2rem" }} />
+              Créer des outils intelligents et accessibles qui font vraiment gagner du temps ou de l'argent.
+            </p>
           
+            <p>
+              Autonome, curieux, rapide à apprendre, j'aime résoudre de vrais problèmes avec du code.
+            </p>
             
-            <br />
-            Mon objectif professionnel est de devenir développeur Fullstack JS, avec une préférence pour le front end.
+            <p>
+              Je suis à la recherche de projets ambitieux où je pourrai mettre cette énergie au service d'une équipe ou d'un produit à impact.
+            </p>
           </div>
         </blockquote>
       </Card.Body>

@@ -12,33 +12,26 @@ export const About = () => {
     <Container fluid className="about-section">
       <Particle />
       <Container>
+        <h1 className="project-heading" style={{ textAlign: "center", marginBottom: "50px" }}>
+          A propos <strong className="purple">de moi</strong>
+        </h1>
+        
         <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px"
-            }}
-          >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px"}}>
-            A propos <strong className="purple"> de moi</strong>
-            </h1>
+          <Col lg={4} style={{ display: "flex", justifyContent: "center", alignItems: "flex-start" }} className="about-img">
+            <img src={avatar} alt="about" className="img-fluid" />
+          </Col>
+          
+          <Col lg={8} style={{ paddingTop: "20px", paddingBottom: "50px" }}>
             <AboutCard />
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={avatar} alt="about" className="iimg-fluid myImage" />
-          </Col>
         </Row>
-        <h1 className="project-heading">
+        
+        <h1 className="project-heading" style={{ textAlign: "center", marginTop: "10px" }}>
           Compétences <strong className="purple">techniques</strong>
         </h1>
         <TechStack/>
-        <h1 className="project-heading">
+        
+        <h1 className="project-heading" style={{ textAlign: "center", marginTop: "10px" }}>
           En cours <strong className="purple">d'apprentissage</strong>
         </h1>
         <LearnStack />
