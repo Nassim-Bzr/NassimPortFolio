@@ -33,7 +33,7 @@ export const AboutCard = () => {
             
             <p>
               <FaGraduationCap style={{ marginRight: "10px", color: "#4cc9f0" }} />
-              Je prépare un mastère en <span className="purple">Développement IA & Big Data</span>, avec un objectif clair :
+              Je prépare un mastère en <span className="purple">Développement IA & Big Data</span> chez IPSSI, avec un objectif clair :
             </p>
 
             <p className="highlight-point" style={{ fontWeight: "600", textAlign: "center", padding: "20px" }}>

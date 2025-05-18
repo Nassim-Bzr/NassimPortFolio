@@ -56,33 +56,122 @@
   background-repeat: no-repeat;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-section.scrolled .home-content {
+  transform: translateY(-20px);
 }
 
 .home-content {
   padding: 16rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
+  position: relative;
+  z-index: 2;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-content::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(76, 201, 240, 0.3), transparent);
+  z-index: -1;
 }
 
 .heading {
   font-size: 2.4em !important;
   padding-left: 50px !important;
+  position: relative;
+  display: inline-block;
+}
+
+.heading::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  border-left: 3px solid #4cc9f0;
+  animation: borderPulse 2s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+  0%, 100% { 
+    height: 30%; 
+    opacity: 0.5;
+  }
+  50% { 
+    height: 100%; 
+    opacity: 1;
+  }
 }
 
 .heading-name {
   font-size: 2.5em !important;
   padding-left: 45px !important;
+  position: relative;
+  perspective: 800px;
 }
 
 .main-name {
   color: #3c4de6;
+  display: inline-block;
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+  text-shadow: 0 0 15px rgba(60, 77, 230, 0.4);
+  position: relative;
+}
+
+.main-name::after {
+  display: none;
+}
+
+.main-name::before {
+  display: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+  }
+  50% {
+    transform: translateZ(20px) translateY(-10px) rotateX(5deg);
+  }
+  100% {
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+  }
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
   color: #3c4de6 !important;
   font-weight: 600 !important;
+  position: relative;
+  overflow: hidden;
 }
+
+.Typewriter__wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #4cc9f0, transparent);
+  animation: gradientSlide 3s linear infinite;
+}
+
+@keyframes gradientSlide {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #3c4de6 !important;
@@ -184,4 +273,173 @@
     padding-top: 2em !important;
     padding-bottom: 2em !important;
   }
+}
+
+/* Nouvelles animations et effets wow */
+.home-header {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation 3D pour le texte principal */
+.heading-name {
+  font-size: 2.5em !important;
+  padding-left: 45px !important;
+  position: relative;
+  perspective: 800px;
+}
+
+.main-name {
+  color: #3c4de6;
+  display: inline-block;
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+  text-shadow: 0 0 15px rgba(60, 77, 230, 0.4);
+  position: relative;
+}
+
+@keyframes float {
+  0% {
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+  }
+  50% {
+    transform: translateZ(20px) translateY(-10px) rotateX(5deg);
+  }
+  100% {
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+  }
+}
+
+/* Effet flottant sur l'image */
+.img-fluid {
+  animation: imageFloat 5s ease-in-out infinite;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+  transition: all 0.5s ease;
+}
+
+@keyframes imageFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.03);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.img-fluid:hover {
+  filter: drop-shadow(0 15px 25px rgba(60, 77, 230, 0.5));
+  transform: scale(1.05);
+}
+
+/* Amélioration de la typographie */
+.Typewriter__wrapper {
+  font-size: 2.2em !important;
+  color: #3c4de6 !important;
+  font-weight: 600 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.Typewriter__wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #4cc9f0, transparent);
+  animation: gradientSlide 3s linear infinite;
+}
+
+@keyframes gradientSlide {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Animation du conteneur */
+.home-content {
+  padding: 16rem 0 2rem !important;
+  color: whitesmoke;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.home-content::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(76, 201, 240, 0.3), transparent);
+  z-index: -1;
+}
+
+/* Animations pour les différents éléments */
+.animate-heading {
+  animation: fadeInLeft 1.2s ease-out 0.1s both;
+  transform-origin: left;
+}
+
+.animate-name {
+  animation: fadeInLeft 1.2s ease-out 0.3s both;
+  transform-origin: left;
+}
+
+.animate-type {
+  animation: fadeInUp 1.2s ease-out 0.5s both;
+}
+
+.animate-image {
+  animation: fadeInRight 1.2s ease-out 0.7s both;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Effet de glitter sur le texte principal */
+.main-name {
+  position: relative;
+}
+
+/* Ajustement pour l'animation avec la souris */
+.home-section:hover .img-fluid {
+  transform: translateY(-5px) rotate(2deg);
+}
+
+.home-section:hover .main-name {
+  text-shadow: 0 0 20px rgba(60, 77, 230, 0.6), 0 0 30px rgba(76, 201, 240, 0.3);
 }
