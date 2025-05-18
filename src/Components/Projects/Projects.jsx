@@ -12,11 +12,12 @@ import LivenceHome from "../Assets/LivenceHome.png";
 import Obonnesaffaires from "../Assets/Obackti.jpg";
 import SajMeta from "../Assets/sajmeta.jpg";
 import AiCoach from "../Assets/Aicoach.png";
+import StopAddict from "../Assets/StopAddict.png";
 
 
 import { DiReact, DiJavascript, DiGithubBadge, DiHtml5, DiPhotoshop, DiWordpress, DiNodejs } from "react-icons/di";
 import { SiRedux, SiMaterialUi, SiTailwindcss, SiPostgresql, SiTypescript } from "react-icons/si";
-import { FaLink, FaCss3, FaServer, FaMedkit, FaCalendarAlt, FaRobot, FaCode, FaDatabase } from "react-icons/fa";
+import { FaLink, FaCss3, FaServer, FaMedkit, FaCalendarAlt, FaRobot, FaCode, FaDatabase, FaUsers } from "react-icons/fa";
 export const Projects = () => {
   return (
     <Container fluid className="project-section">
@@ -27,6 +28,65 @@ export const Projects = () => {
         </h1>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+          <Card className="project-card-view">
+            <Card.Img variant="top" src={StopAddict} alt="Stop Addict" />
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                Stop Addict - Application d'aide au sevrage
+              </Card.Title>
+              <Card.Text style={{ textAlign: "justify" }}>
+                <br/>
+                Stop Addict est une application qui permet aux utilisateurs de vaincre leurs addictions grâce à un suivi 
+                personnalisé et un soutien communautaire.
+                <br/>
+                <br/>
+                Fonctionnalités principales :
+                <br/>
+                • Suivi des économies réalisées
+                <br/>
+                • Compteur de substances évitées (cigarettes, etc.)
+                <br/>
+                • Calcul de la vie gagnée en jours
+                <br/>
+                • Forum d'entraide entre utilisateurs
+                <br/>
+                • Système de demande d'aide et de soutien en groupe
+                <br/>
+                • Statistiques personnalisées sur les progrès
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React Native, Node.js, MongoDB, Redux
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <DiNodejs className="Techstacks-icons" />
+                  <SiRedux className="Techstacks-icons" />
+                  <FaUsers className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <Button
+                variant="primary"
+                href="#"
+                target="_blank"
+                style={{ marginTop: "5%" }}
+              >
+                {" "}
+                <DiGithubBadge /> Github
+              </Button>
+              <Button
+                variant="primary"
+                href="#"
+                target="_blank"
+                style={{ marginLeft: "5%", marginTop: "5%" }}
+              >
+                {" "}
+                <FaLink /> Télécharger
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
 
         <Col md={6} className="project-card" style={{ textAlign: "center" }}>
           <Card className="project-card-view">
