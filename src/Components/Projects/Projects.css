@@ -20,6 +20,8 @@
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .project-card-view:hover {
@@ -32,6 +34,8 @@
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
+  object-fit: contain !important;
+  max-height: 300px !important;
 }
 
 .btn-primary {
@@ -59,6 +63,10 @@
 .Techstacks {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
 }
 
 .Techstacks-icons {
@@ -74,4 +82,156 @@
   box-shadow: 4px 5px 4px 3px rgba(91, 155, 228, 0.959) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+}
+
+/* Améliorations pour le responsive */
+@media (max-width: 767px) {
+  .project-card {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+  
+  .project-card-view {
+    padding: 15px !important;
+  }
+  
+  .card-img-top {
+    padding: 10px !important;
+    max-height: 200px !important;
+  }
+  
+  .project-heading {
+    font-size: 1.8em !important;
+  }
+  
+  .Techstacks {
+    flex-direction: column;
+  }
+  
+  .Techstacks > div {
+    flex-wrap: wrap;
+    gap: 10px !important;
+  }
+  
+  .Techstacks-icons {
+    font-size: 2.2em !important;
+    margin: 3px !important;
+    padding: 3px !important;
+  }
+  
+  .card-text {
+    font-size: 14px !important;
+  }
+  
+  .card-title {
+    font-size: 18px !important;
+  }
+  
+  .btn {
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Style pour les badges "En développement" */
+.dev-badge {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  background-color: #623686 !important;
+  color: white !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-size: 0.8em !important;
+  z-index: 10 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+.card-text {
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.card-title {
+  font-weight: 800 !important;
+  margin-bottom: 15px !important;
+  font-size: 1.5rem !important;
+}
+
+/* Amélioration des boutons en flex pour responsive */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5%;
+  flex-wrap: wrap;
+}
+
+/* Style "bullet points" améliorés */
+.feature-list {
+  list-style-type: none;
+  padding-left: 5px;
+  margin-top: 15px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.feature-list li::before {
+  content: "•";
+  color: #3c4de6;
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+/* Ajustements responsives supplémentaires */
+@media (max-width: 767px) {
+  .project-card-view {
+    margin-bottom: 15px;
+  }
+  
+  .card-text {
+    line-height: 1.5;
+    font-size: 14px !important;
+  }
+  
+  .feature-list li {
+    margin-bottom: 6px;
+  }
+  
+  .btn-container {
+    gap: 10px;
+  }
+  
+  .project-section {
+    padding-top: 100px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Amélioration du badge "En développement" sur mobile */
+  .dev-badge {
+    font-size: 0.7em !important;
+    padding: 3px 6px !important;
+  }
+}
+
+/* Animation subtile sur les cards */
+.project-card-view {
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out !important;
+}
+
+.project-card-view:hover {
+  transform: translateY(-10px) scale(1.01) !important;
 }

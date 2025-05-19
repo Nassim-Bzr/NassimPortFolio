@@ -30,37 +30,31 @@ export const Projects = () => {
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+        <Col md={6} className="project-card">
           <Card className="project-card-view">
             <Card.Img 
               variant="top" 
               src={StopAddict} 
               alt="Stop Addict" 
-              style={{ maxHeight: "300px", objectFit: "contain" }}
+              className="card-img-top"
             />
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 Stop Addict - Application d'aide au sevrage
               </Card.Title>
-              <Card.Text style={{ textAlign: "justify" }}>
-                <br/>
+              <Card.Text className="card-text">
                 Stop Addict est une application qui permet aux utilisateurs de vaincre leurs addictions grâce à un suivi 
                 personnalisé et un soutien communautaire.
-                <br/>
-                <br/>
-                Fonctionnalités principales :
-                <br/>
-                • Suivi des économies réalisées
-                <br/>
-                • Compteur de substances évitées (cigarettes, etc.)
-                <br/>
-                • Calcul de la vie gagnée en jours
-                <br/>
-                • Forum d'entraide entre utilisateurs
-                <br/>
-                • Système de demande d'aide et de soutien en groupe
-                <br/>
-                • Statistiques personnalisées sur les progrès
+                
+                <p><strong>Fonctionnalités principales :</strong></p>
+                <ul className="feature-list">
+                  <li>Suivi des économies réalisées</li>
+                  <li>Compteur de substances évitées (cigarettes, etc.)</li>
+                  <li>Calcul de la vie gagnée en jours</li>
+                  <li>Forum d'entraide entre utilisateurs</li>
+                  <li>Système de demande d'aide et de soutien en groupe</li>
+                  <li>Statistiques personnalisées sur les progrès</li>
+                </ul>
               </Card.Text>
               <div className="Techstacks">
                 Stack technique : React Native, Node.js, MongoDB, Redux
@@ -72,44 +66,44 @@ export const Projects = () => {
                 </div>
               </div>
               
-              <Button
-                variant="primary"
-                href="#"
-                target="_blank"
-                style={{ marginTop: "5%" }}
-              >
-                {" "}
-                <DiGithubBadge /> Github
-              </Button>
-              <Button
-                variant="primary"
-                href="#"
-                target="_blank"
-                style={{ marginLeft: "5%", marginTop: "5%" }}
-              >
-                {" "}
-                <FaLink /> Télécharger
-              </Button>
+              <div className="btn-container">
+                <Button
+                  variant="primary"
+                  href="#"
+                  target="_blank"
+                >
+                  {" "}
+                  <DiGithubBadge /> Github
+                </Button>
+                <Button
+                  variant="primary"
+                  href="#"
+                  target="_blank"
+                >
+                  {" "}
+                  <FaLink /> Télécharger
+                </Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+        <Col md={6} className="project-card">
           <Card className="project-card-view">
             <Card.Img 
               variant="top" 
               src={Laptop} 
               alt="LeBonCoinAi" 
-              style={{ maxHeight: "300px", objectFit: "contain" }}
+              className="card-img-top"
             />
-            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+            <div className="dev-badge">
               En développement
             </div>
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 LeBonCoinAi - Recherche d'annonces automatisée
               </Card.Title>
-              <Card.Text style={{ textAlign: "justify" }}>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
                 <br/>
                 LeBoncoin AI est une application intelligente qui automatise la recherche de petites annonces selon des critères avancés 
                 (ex : Renault Clio noire, diesel, &lt;150 000 km, rayon 50 km).
@@ -160,22 +154,22 @@ export const Projects = () => {
           </Card>
         </Col>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+        <Col md={6} className="project-card">
           <Card className="project-card-view">
             <Card.Img 
               variant="top" 
               src={Laptop} 
               alt="Smoobu V2" 
-              style={{ maxHeight: "300px", objectFit: "contain" }}
+              className="card-img-top"
             />
-            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+            <div className="dev-badge">
               En développement
             </div>
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 Smoobu V2 - Gestion immobilière courte durée
               </Card.Title>
-              <Card.Text style={{ textAlign: "justify" }}>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
                 <br/>
                 Smoobu V2 est un outil de gestion immobilière courte durée, inspiré de Smoobu mais repensé pour les 
                 propriétaires ou gestionnaires d'appartements.
@@ -228,22 +222,22 @@ export const Projects = () => {
           </Card>
         </Col>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+        <Col md={6} className="project-card">
           <Card className="project-card-view">
             <Card.Img 
               variant="top" 
               src={Laptop} 
               alt="CheckCalories" 
-              style={{ maxHeight: "300px", objectFit: "contain" }}
+              className="card-img-top"
             />
-            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+            <div className="dev-badge">
               En développement
             </div>
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 CheckCalories - Suivi alimentaire par IA
               </Card.Title>
-              <Card.Text style={{ textAlign: "justify" }}>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
                 <br/>
                 CheckCalories est une application IA qui permet de suivre son alimentation grâce à la reconnaissance 
                 visuelle et à l'analyse textuelle.
@@ -294,22 +288,22 @@ export const Projects = () => {
           </Card>
         </Col>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+        <Col md={6} className="project-card">
           <Card className="project-card-view">
             <Card.Img 
               variant="top" 
               src={Laptop} 
               alt="AutoJobAI" 
-              style={{ maxHeight: "300px", objectFit: "contain" }}
+              className="card-img-top"
             />
-            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+            <div className="dev-badge">
               En développement
             </div>
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 AutoJobAI - Assistant recherche d'emploi intelligent
               </Card.Title>
-              <Card.Text style={{ textAlign: "justify" }}>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
                 <br/>
                 AutoJobAI est une application qui analyse un CV, détecte les compétences clés, et cherche automatiquement 
                 des offres d'alternance ou d'emploi correspondant au profil.
@@ -360,22 +354,22 @@ export const Projects = () => {
           </Card>
         </Col>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+        <Col md={6} className="project-card">
           <Card className="project-card-view">
             <Card.Img 
               variant="top" 
               src={Laptop} 
               alt="IA Coach Revente" 
-              style={{ maxHeight: "300px", objectFit: "contain" }}
+              className="card-img-top"
             />
-            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+            <div className="dev-badge">
               En développement
             </div>
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 IA Coach Revente - Assistant de vente d'occasion
               </Card.Title>
-              <Card.Text style={{ textAlign: "justify" }}>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
                 <br/>
                 IA Coach Revente est une app qui aide les particuliers à estimer la valeur d'un objet qu'ils souhaitent 
                 revendre (voiture, objet tech, vêtement, etc.).
@@ -426,17 +420,17 @@ export const Projects = () => {
           </Card>
         </Col>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+        <Col md={6} className="project-card">
           <Card className="project-card-view">
-            <Card.Img variant="top" src={AiCoach} alt="AI Recruteur Coach" />
-            <div style={{ position: "absolute", top: "10px", right: "10px", backgroundColor: "#623686", color: "white", padding: "4px 8px", borderRadius: "4px", fontSize: "0.8em" }}>
+            <Card.Img variant="top" src={AiCoach} alt="AI Recruteur Coach" className="card-img-top" />
+            <div className="dev-badge">
               En développement
             </div>
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 AI Recruteur Coach - Simulateur d'entretien IA
               </Card.Title>
-              <Card.Text style={{ textAlign: "justify" }}>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
                 <br/>
                 AI Recruteur Coach est un outil innovant qui permet aux candidats de simuler des entretiens d'embauche
                 avec une intelligence artificielle conçue pour reproduire le comportement d'un recruteur.
@@ -496,14 +490,14 @@ export const Projects = () => {
           </Card>
         </Col>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+        <Col md={6} className="project-card">
           <Card className="project-card-view">
-            <Card.Img variant="top" src={SajMeta} alt="Saj Meta Deal" />
+            <Card.Img variant="top" src={SajMeta} alt="Saj Meta Deal" className="card-img-top" />
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 Saj Meta Deal - Plateforme de formations médicales
               </Card.Title>
-              <Card.Text style={{ textAlign: "justify" }}>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
                 <br/>
                 Saj Meta Deal est une plateforme spécialisée dans les formations DPC (Développement Professionnel Continu) 
                 pour les professionnels de santé. Le site propose un catalogue complet de formations adaptées à différentes 
@@ -532,36 +526,36 @@ export const Projects = () => {
                 </div>
               </div>
               
-              <Button
-                variant="primary"
-                href="https://github.com/Nassim-Bzr/Saj-Web"
-                target="_blank"
-                style={{ marginTop: "5%" }}
-              >
-                {" "}
-                <DiGithubBadge /> Github
-              </Button>
-              <Button
-                variant="primary"
-                href="https://saj-web-8596.vercel.app/formations"
-                target="_blank"
-                style={{ marginLeft: "5%", marginTop: "5%" }}
-              >
-                {" "}
-                <FaLink /> Voir le site
-              </Button>
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
+                <Button
+                  variant="primary"
+                  href="https://github.com/Nassim-Bzr/Saj-Web"
+                  target="_blank"
+                >
+                  {" "}
+                  <DiGithubBadge /> Github
+                </Button>
+                <Button
+                  variant="primary"
+                  href="https://saj-web-8596.vercel.app/formations"
+                  target="_blank"
+                >
+                  {" "}
+                  <FaLink /> Voir le site
+                </Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+        <Col md={6} className="project-card">
           <Card className="project-card-view">
-            <Card.Img variant="top" src={LivenceHome} alt="Livence Project Booking" />
+            <Card.Img variant="top" src={LivenceHome} alt="Livence Project Booking" className="card-img-top" />
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 Livence - Plateforme de réservation
               </Card.Title>
-              <Card.Text style={{ textAlign: "justify" }}>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
                 <br/>
                 Livence est une application de réservation en ligne qui permet aux utilisateurs de réserver 
                 facilement des services. La plateforme offre une interface intuitive pour la recherche et 
@@ -586,36 +580,36 @@ export const Projects = () => {
                 </div>
               </div>
               
-              <Button
-                variant="primary"
-                href="https://github.com/Nassim-Bzr/LivenceProjectBooking"
-                target="_blank"
-                style={{ marginTop: "5%" }}
-              >
-                {" "}
-                <DiGithubBadge /> Github
-              </Button>
-              <Button
-                variant="primary"
-                href="https://www.livence.fr/"
-                target="_blank"
-                style={{ marginLeft: "5%", marginTop: "5%" }}
-              >
-                {" "}
-                <FaLink /> Voir le site
-              </Button>
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
+                <Button
+                  variant="primary"
+                  href="https://github.com/Nassim-Bzr/LivenceProjectBooking"
+                  target="_blank"
+                >
+                  {" "}
+                  <DiGithubBadge /> Github
+                </Button>
+                <Button
+                  variant="primary"
+                  href="https://www.livence.fr/"
+                  target="_blank"
+                >
+                  {" "}
+                  <FaLink /> Voir le site
+                </Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
+        <Col md={6} className="project-card">
           <Card className="project-card-view">
-            <Card.Img variant="top" src={Obonnesaffaires} alt="Obonnesaffaires E-commerce" />
+            <Card.Img variant="top" src={Obonnesaffaires} alt="Obonnesaffaires E-commerce" className="card-img-top" />
             <Card.Body>
               <Card.Title style={{ fontWeight: "800" }}>
                 Obonnesaffaires - Site E-commerce
               </Card.Title>
-              <Card.Text style={{ textAlign: "justify" }}>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
                 <br/>
                 Obonnesaffaires est une plateforme e-commerce développée en collaboration via Git. Le site 
                 propose une expérience d'achat en ligne simple et efficace pour les consommateurs.
@@ -643,192 +637,113 @@ export const Projects = () => {
                 </div>
               </div>
               
-              <Button
-                variant="primary"
-                href="https://obonnesaffaires.fr/"
-                target="_blank"
-                style={{ marginTop: "5%" }}
-              >
-                {" "}
-                <FaLink /> Voir le site
-              </Button>
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
+                <Button
+                  variant="primary"
+                  href="https://obonnesaffaires.fr/"
+                  target="_blank"
+                >
+                  {" "}
+                  <FaLink /> Voir le site
+                </Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
 
-        <Col md={6} className="project-card" style={{ textAlign: "center" }}>
-  <Card className="project-card-view">
-    <Card.Img variant="top" src={TiLabel} alt="Application de quiz" />
-    <Card.Body>
-      <Card.Title style={{ fontWeight: "800" }}>
-        Application de quiz
-      </Card.Title>
-      <Card.Text style={{ textAlign: "justify" }}>
-
-       <br/>
-        J'ai réalisé seul une application de quiz qui permet aux utilisateurs de tester leurs connaissances dans différents domaines.
-
-        <br/>
-       <br/>
-        L'application propose une large gamme de quiz dans diverses catégories. Les utilisateurs peuvent sélectionner un quiz de leur choix et répondre à une série de questions.
-
-       <br/>
-       <br/>
-      
-        Une fonctionnalité phare est le mode "joueur contre joueur" qui permet aux utilisateurs de défier leurs amis en temps réel. Les joueurs peuvent créer des salles privées et participer à des compétitions avec un système de classement intégré.
-
-        <br/>
-       <br/>
-
-        L'application offre également une expérience interactive avec des fonctionnalités telles qu'un compte à rebours pour chaque question, un affichage des scores en temps réel, et un mode tournoi pour des compétitions à plus grande échelle.
-
-      </Card.Text>
-      <div className="Techstacks">
-        Stack technique : React JS & Redux côté front ,
-       <br/> Node JS PostgreSQL côté back.
-       <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
-          <DiReact className="Techstacks-icons" />
-          <SiRedux className="Techstacks-icons" />
-          <DiNodejs className="Techstacks-icons" />
-          <SiPostgresql className="Techstacks-icons" />
-        </div>
-      </div>
-      
-     <Button
+        <Col md={6} className="project-card">
+          <Card className="project-card-view">
+            <Card.Img variant="top" src={TiLabel} alt="Application de quiz" className="card-img-top" />
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                Application de quiz
+              </Card.Title>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
+                <br/>
+                J'ai réalisé seul une application de quiz qui permet aux utilisateurs de tester leurs connaissances dans différents domaines.
+                <br/>
+                <br/>
+                L'application propose une large gamme de quiz dans diverses catégories. Les utilisateurs peuvent sélectionner un quiz de leur choix et répondre à une série de questions.
+                <br/>
+                <br/>
+                Une fonctionnalité phare est le mode "joueur contre joueur" qui permet aux utilisateurs de défier leurs amis en temps réel. Les joueurs peuvent créer des salles privées et participer à des compétitions avec un système de classement intégré.
+                <br/>
+                <br/>
+                L'application offre également une expérience interactive avec des fonctionnalités telles qu'un compte à rebours pour chaque question, un affichage des scores en temps réel, et un mode tournoi pour des compétitions à plus grande échelle.
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React JS & Redux côté front ,
+                <br/> Node JS PostgreSQL côté back.
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
+                  <SiRedux className="Techstacks-icons" />
+                  <DiNodejs className="Techstacks-icons" />
+                  <SiPostgresql className="Techstacks-icons" />
+                </div>
+              </div>
+              
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
+                <Button
                   variant="primary"
                   href="https://github.com/Nassim-Bzr/Apo-Quiz"
                   target="_blank"
-                  style={{ marginTop: "5%" }}
                 >
                   {" "}
                   <DiGithubBadge /> Github
                 </Button>
-    </Card.Body>
-  </Card>
-  
-</Col>
-<Col md={6} className="project-card">
-    <Card className="project-card-view">
-      <Card.Img variant="top" src={MegaBonPlan} alt="MegaBonPlan" />
-      <Card.Body>
-        <Card.Title style={{ fontWeight: "800" }}>
-          MegaBonPlan - Partage de bons plans
-        </Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          <br/>
-          Inspiré de Dealabs, MegaBonPlan est une plateforme communautaire où les utilisateurs peuvent partager et découvrir des bons plans, codes promo et offres spéciales.
-          <br/>
-          <br/>
-          Fonctionnalités principales :
-          <br/>
-          • Système de vote permettant à la communauté de faire remonter les meilleurs deals
-          <br/>
-          • Alertes personnalisées pour les offres correspondant aux centres d'intérêt des utilisateurs
-          <br/>
-          • Commentaires et discussions sur chaque bon plan
-          <br/>
-          • Section "Deals à ne pas manquer" mise en avant sur la page d'accueil
-          <br/>
-          • Possibilité d'ajouter des liens d'affiliation pour les utilisateurs contributeurs
-        </Card.Text>
-        <div className="Techstacks">
-          Stack technique : React JS, HTML, CSS, JavaScript
-          <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
-            <DiReact className="Techstacks-icons" />
-            <DiHtml5 className="Techstacks-icons" />
-            <FaCss3 className="Techstacks-icons" />
-            <DiJavascript className="Techstacks-icons" />
-          </div>
-        </div>
-        <Button
-                  variant="primary"
-                  href="https://github.com/Nassim-Bzr/Megabonplan"
-                  target="_blank"
-                  style={{ marginTop: "5%" }}
-                >
-                  {" "}
-                  <DiGithubBadge /> Github
-                </Button>
-      </Card.Body>
-    </Card>
-  </Col>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
 
-    
-
-        {/*   <Col md={6} className="project-card">
-            <Card className="project-card-view" style={{ textAlign: "center" }}>
-              <Card.Img variant="top" src={AtelierCombine} alt="Clockify Clone" />
-              <Card.Body>
-                <Card.Title style={{ fontWeight: "800" }}>
-                  Site vitrine : L'atelier Combiné
-                </Card.Title>
-                <Card.Text style={{ textAlign: "justify" }}>
-                Construction de toute la charte graphique, logo compris.
-                <p>Mise en place du site dans son ensemble sur serveur o2switch.</p>
-                Rédaction des contenus. Enregistrement SEO auprès des moteurs de recherche
-                </Card.Text>
-                <div className="Techstacks">
-                  <DiWordpress className="Techstacks-icons" />                 
-                  <DiPhotoshop className="Techstacks-icons" />
-                </div>
-                <Button
-                  variant="primary"
-                  style={{ marginLeft: "5%", marginTop: "5%" }}
-                  href="https://atelier-combine.fr/"
-                  target="_blank"
-                >
-                  {" "}
-                  <FaLink /> Voir le site
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-
-
-          <Col md={6} className="project-card" style={{ textAlign: "center" }}>
-            <Card className="project-card-view">
-              <Card.Img variant="top" src= {WeatherApp}  alt="Weather App" />
-              <Card.Body>
-                <Card.Title style={{ fontWeight: "800" }}>
-                Application Web- Affichage météo selon la ville
-                </Card.Title>
-                <Card.Text style={{ textAlign: "justify" }}>
-                Le weatherApp permet d'afficher la météo du jour + les prévisions à 5 jours.
-                Application développée pour un affichage dynamique.
-                Pour afficher la météo de votre ville il suffit de modifier le nom de la ville dans l'url.
-                </Card.Text>
-                <div className="Techstacks">
+        <Col md={6} className="project-card">
+          <Card className="project-card-view">
+            <Card.Img variant="top" src={MegaBonPlan} alt="MegaBonPlan" className="card-img-top" />
+            <Card.Body>
+              <Card.Title style={{ fontWeight: "800" }}>
+                MegaBonPlan - Partage de bons plans
+              </Card.Title>
+              <Card.Text className="card-text" style={{ textAlign: "justify" }}>
+                <br/>
+                Inspiré de Dealabs, MegaBonPlan est une plateforme communautaire où les utilisateurs peuvent partager et découvrir des bons plans, codes promo et offres spéciales.
+                <br/>
+                <br/>
+                Fonctionnalités principales :
+                <br/>
+                • Système de vote permettant à la communauté de faire remonter les meilleurs deals
+                <br/>
+                • Alertes personnalisées pour les offres correspondant aux centres d'intérêt des utilisateurs
+                <br/>
+                • Commentaires et discussions sur chaque bon plan
+                <br/>
+                • Section "Deals à ne pas manquer" mise en avant sur la page d'accueil
+                <br/>
+                • Possibilité d'ajouter des liens d'affiliation pour les utilisateurs contributeurs
+              </Card.Text>
+              <div className="Techstacks">
+                Stack technique : React JS, HTML, CSS, JavaScript
+                <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "15px" }}>
+                  <DiReact className="Techstacks-icons" />
                   <DiHtml5 className="Techstacks-icons" />
                   <FaCss3 className="Techstacks-icons" />
                   <DiJavascript className="Techstacks-icons" />
                 </div>
-                // <Button
-                //   variant="primary"
-                //   href="https://github.com/Vincent-PERON/Ti-Weather"
-                //   target="_blank"
-                //   style={{ marginTop: "5%" }}
-                // >
-                //   {" "}
-                //   <DiGithubBadge /> Github
-                // </Button>
+              </div>
+              <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
                 <Button
                   variant="primary"
-                  style={{ marginLeft: "5%", marginTop: "5%" }}
-                  href="https://vincent-peron.github.io/Ti-Weather/index.html?ville=Brest"
+                  href="https://github.com/Nassim-Bzr/Megabonplan"
                   target="_blank"
                 >
                   {" "}
-                  <FaLink /> Voir le site
+                  <DiGithubBadge /> Github
                 </Button>
-              </Card.Body>
-            </Card>
-          </Col>
- */}
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
 
-
-
-
-          <Col md={6}></Col>
+        <Col md={6}></Col>
         </Row>
       </Container>
     </Container>
