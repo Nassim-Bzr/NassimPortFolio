@@ -16,7 +16,7 @@ export const AboutCard = () => {
             
             <p className="highlight-point">
               <FaLaptopCode style={{ marginRight: "10px", fontSize: "1.2rem" }} />
-              Mon parcours m'amène à explorer tout ce qui peut avoir de l'impact : <span className="purple">React</span>, Python, PHP, IA, automatisation, scraping, data, design, ou encore DevOps. Je n'ai pas de stack figée : je choisis les bons outils pour chaque idée.
+              Mon parcours m'amène à explorer tout ce qui peut avoir de l'impact : <span style={{ color: "#4cc9f0" }}>React</span>, Python, PHP, IA, automatisation, scraping, data, design, ou encore DevOps. Je n'ai pas de stack figée : je choisis les bons outils pour chaque idée.
             </p>
           
             <p style={{ lineHeight: "1.7" }}>
