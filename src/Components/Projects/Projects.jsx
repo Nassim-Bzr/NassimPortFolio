@@ -15,6 +15,8 @@ import AiCoach from "../Assets/Aicoach.png";
 import StopAddict from "../Assets/StopAddict.png";
 import Laptop from "../Assets/laptop.png";
 
+import SmoobuV2 from "../Assets/SmoobuV2.png";
+
 
 import { DiReact, DiJavascript, DiGithubBadge, DiHtml5, DiPhotoshop, DiWordpress, DiNodejs } from "react-icons/di";
 import { SiRedux, SiMaterialUi, SiTailwindcss, SiPostgresql, SiTypescript } from "react-icons/si";
@@ -158,8 +160,8 @@ export const Projects = () => {
           <Card className="project-card-view">
             <Card.Img 
               variant="top" 
-              src={Laptop} 
-              alt="Smoobu V2" 
+              src={SmoobuV2} 
+              alt="Smoobu V2"   
               className="card-img-top"
             />
             <div className="dev-badge">
