@@ -204,7 +204,7 @@ export const Projects = () => {
               <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "5%" }}>
                 <Button
                   variant="primary"
-                  href="#"
+                  href="https://github.com/Nassim-Bzr?tab=repositories"
                   target="_blank"
                 >
                   {" "}
