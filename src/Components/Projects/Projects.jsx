@@ -14,7 +14,7 @@ import SajMeta from "../Assets/sajmeta.jpg";
 import AiCoach from "../Assets/Aicoach.png";
 import StopAddict from "../Assets/StopAddict.png";
 import Laptop from "../Assets/laptop.png";
-
+import LeBonCoinAi from "../Assets/LeBonCoinAi.png";
 import SmoobuV2 from "../Assets/SmoobuV2.png";
 
 
@@ -94,7 +94,7 @@ export const Projects = () => {
           <Card className="project-card-view">
             <Card.Img 
               variant="top" 
-              src={Laptop} 
+              src={LeBonCoinAi} 
               alt="LeBonCoinAi" 
               className="card-img-top"
             />
