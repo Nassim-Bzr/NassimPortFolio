@@ -204,25 +204,6 @@
   z-index: 1;
 }
 
-.about-img::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 85%;
-  height: 85%;
-  border-radius: 50%;
-  border: 2px dashed rgba(76, 201, 240, 0.5);
-  z-index: 0;
-  animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
 .about-img img:hover {
   transform: scale(1.05) rotate(5deg) !important;
   box-shadow: 0 0 40px rgba(60, 77, 230, 0.6), 0 0 20px rgba(76, 201, 240, 0.6) inset !important;
@@ -273,10 +254,6 @@
   
   .project-heading {
     font-size: 2em !important;
-  }
-  
-  .about-img::before {
-    display: none;
   }
 }
 

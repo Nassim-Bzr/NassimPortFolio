@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row, Modal } from "react-bootstrap";
 import { Particle } from "../Home/Particle";
 import "./Projects.css";
 
@@ -15,21 +15,28 @@ import AiCoach from "../Assets/Aicoach.png";
 import StopAddict from "../Assets/StopAddict.png";
 import Laptop from "../Assets/laptop.png";
 import LeBonCoinAi from "../Assets/LeBonCoinAi.png";
+import CheckCalories from "../Assets/CheckCaloriesAi.png";
+import CheckCalories2 from "../Assets/CheckCaloriesAi2.png";  
+
 import SmoobuV2 from "../Assets/SmoobuV2.png";
 
 import { DiReact, DiJavascript, DiGithubBadge, DiHtml5, DiPhotoshop, DiWordpress, DiNodejs } from "react-icons/di";
 import { SiRedux, SiMaterialUi, SiTailwindcss, SiPostgresql, SiTypescript } from "react-icons/si";
-import { FaLink, FaCss3, FaServer, FaMedkit, FaCalendarAlt, FaRobot, FaCode, FaDatabase, FaUsers, FaSearch, FaHome, FaUtensils, FaBriefcase, FaShoppingCart, FaChevronLeft, FaChevronRight, FaPlay, FaPause } from "react-icons/fa";
+import { FaLink, FaCss3, FaServer, FaMedkit, FaCalendarAlt, FaRobot, FaCode, FaDatabase, FaUsers, FaSearch, FaHome, FaUtensils, FaBriefcase, FaShoppingCart, FaChevronLeft, FaChevronRight, FaTimes, FaExpandAlt } from "react-icons/fa";
 
 export const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [showImageModal, setShowImageModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Données des projets
   const projects = [
     {
       id: 1,
       image: StopAddict,
+      images: [StopAddict], // Tableau d'images pour la lightbox
       title: "Stop Addict - Application d'aide au sevrage",
       description: "Stop Addict est une application qui permet aux utilisateurs de vaincre leurs addictions grâce à un suivi personnalisé et un soutien communautaire.",
       features: [
@@ -42,7 +49,7 @@ export const Projects = () => {
       ],
       techStack: "React Native, Node.js, MongoDB, Redux",
       techIcons: [DiReact, DiNodejs, SiRedux, FaUsers],
-      githubLink: "#",
+      githubLink: "https://github.com/Nassim-Bzr/StopAddict",
       liveLink: "#",
       liveLinkText: "Télécharger",
       status: "completed"
@@ -50,6 +57,7 @@ export const Projects = () => {
     {
       id: 2,
       image: LeBonCoinAi,
+      images: [LeBonCoinAi],
       title: "LeBonCoinAi - Recherche d'annonces automatisée",
       description: "LeBoncoin AI est une application intelligente qui automatise la recherche de petites annonces selon des critères avancés (ex : Renault Clio noire, diesel, <150 000 km, rayon 50 km).",
       features: [
@@ -61,7 +69,7 @@ export const Projects = () => {
       ],
       techStack: "Python, Node.js, React, API IA",
       techIcons: [DiReact, DiNodejs, FaSearch, FaRobot],
-      githubLink: "#",
+      githubLink: "https://github.com/Nassim-Bzr/LeBonCoinAI",
       liveLink: "#",
       liveLinkText: "En développement",
       status: "development"
@@ -69,6 +77,7 @@ export const Projects = () => {
     {
       id: 3,
       image: SmoobuV2,
+      images: [SmoobuV2],
       title: "Smoobu V2 - Gestion immobilière courte durée",
       description: "Smoobu V2 est un outil de gestion immobilière courte durée, inspiré de Smoobu mais repensé pour les propriétaires ou gestionnaires d'appartements.",
       features: [
@@ -81,14 +90,15 @@ export const Projects = () => {
       ],
       techStack: "React, Node.js, SQL, API IA",
       techIcons: [DiReact, DiNodejs, FaHome, FaDatabase],
-      githubLink: "https://github.com/Nassim-Bzr?tab=repositories",
+      githubLink: "https://github.com/Nassim-Bzr/SmoobuV2",
       liveLink: "#",
       liveLinkText: "En développement",
       status: "development"
     },
     {
       id: 4,
-      image: Laptop,
+      image: CheckCalories,
+      images: [CheckCalories, CheckCalories2],
       title: "CheckCalories - Suivi alimentaire par IA",
       description: "CheckCalories est une application IA qui permet de suivre son alimentation grâce à la reconnaissance visuelle et à l'analyse textuelle.",
       features: [
@@ -100,7 +110,7 @@ export const Projects = () => {
       ],
       techStack: "React Native, Node.js, Computer Vision, NLP",
       techIcons: [DiReact, DiNodejs, FaUtensils, FaRobot],
-      githubLink: "#",
+      githubLink: "https://github.com/Nassim-Bzr/CheckCalories",
       liveLink: "#",
       liveLinkText: "En développement",
       status: "development"
@@ -108,6 +118,7 @@ export const Projects = () => {
     {
       id: 5,
       image: Laptop,
+      images: [Laptop],
       title: "AutoJobAI - Assistant recherche d'emploi intelligent",
       description: "AutoJobAI est une application qui analyse un CV, détecte les compétences clés, et cherche automatiquement des offres d'alternance ou d'emploi correspondant au profil.",
       features: [
@@ -119,7 +130,7 @@ export const Projects = () => {
       ],
       techStack: "React, Node.js, API IA, NLP",
       techIcons: [DiReact, DiNodejs, FaBriefcase, FaRobot],
-      githubLink: "#",
+      githubLink: "https://github.com/Nassim-Bzr/AutoJobAI",
       liveLink: "#",
       liveLinkText: "En développement",
       status: "development"
@@ -127,6 +138,7 @@ export const Projects = () => {
     {
       id: 6,
       image: Laptop,
+      images: [Laptop],
       title: "IA Coach Revente - Assistant de vente d'occasion",
       description: "IA Coach Revente est une app qui aide les particuliers à estimer la valeur d'un objet qu'ils souhaitent revendre (voiture, objet tech, vêtement, etc.).",
       features: [
@@ -138,7 +150,7 @@ export const Projects = () => {
       ],
       techStack: "React, Node.js, API IA, NLP",
       techIcons: [DiReact, DiNodejs, FaShoppingCart, FaRobot],
-      githubLink: "#",
+      githubLink: "https://github.com/Nassim-Bzr/IA-Coach-Revente",
       liveLink: "#",
       liveLinkText: "En développement",
       status: "development"
@@ -146,6 +158,7 @@ export const Projects = () => {
     {
       id: 7,
       image: AiCoach,
+      images: [AiCoach],
       title: "AI Recruteur Coach - Simulateur d'entretien IA",
       description: "AI Recruteur Coach est un outil innovant qui permet aux candidats de simuler des entretiens d'embauche avec une intelligence artificielle conçue pour reproduire le comportement d'un recruteur.",
       features: [
@@ -159,13 +172,14 @@ export const Projects = () => {
       techIcons: [DiReact, SiTypescript, SiTailwindcss, FaRobot, DiNodejs],
       githubLink: "https://github.com/Nassim-Bzr/AiCoachRecrut",
       backendLink: "https://github.com/Nassim-Bzr/Back-AiCoachJob",
-      liveLink: "#",
-      liveLinkText: "En développement",
-      status: "development"
+      liveLink: "https://ai-coach-recrut.vercel.app/",
+      liveLinkText: "Voir le site",
+      status: "completed"
     },
     {
       id: 8,
       image: SajMeta,
+      images: [SajMeta],
       title: "Saj Meta Deal - Plateforme de formations médicales",
       description: "Saj Meta Deal est une plateforme spécialisée dans les formations DPC (Développement Professionnel Continu) pour les professionnels de santé.",
       features: [
@@ -185,6 +199,7 @@ export const Projects = () => {
     {
       id: 9,
       image: LivenceHome,
+      images: [LivenceHome],
       title: "Livence - Plateforme de réservation",
       description: "Livence est une application de réservation en ligne qui permet aux utilisateurs de réserver facilement des services. La plateforme offre une interface intuitive pour la recherche et la réservation.",
       features: [
@@ -204,6 +219,7 @@ export const Projects = () => {
     {
       id: 10,
       image: Obonnesaffaires,
+      images: [Obonnesaffaires],
       title: "Obonnesaffaires - Site E-commerce",
       description: "Obonnesaffaires est une plateforme e-commerce développée en collaboration via Git. Le site propose une expérience d'achat en ligne simple et efficace.",
       features: [
@@ -215,7 +231,7 @@ export const Projects = () => {
       ],
       techStack: "React JS, CSS, Node.js, MongoDB",
       techIcons: [DiReact, FaCss3, DiNodejs, DiJavascript],
-      githubLink: null,
+      githubLink: "https://github.com/Nassim-Bzr/Obonnesaffaires",
       liveLink: "https://obonnesaffaires.fr/",
       liveLinkText: "Voir le site",
       status: "completed"
@@ -223,6 +239,7 @@ export const Projects = () => {
     {
       id: 11,
       image: TiLabel,
+      images: [TiLabel],
       title: "Application de quiz",
       description: "Application de quiz qui permet aux utilisateurs de tester leurs connaissances dans différents domaines avec un mode joueur contre joueur en temps réel.",
       features: [
@@ -243,6 +260,7 @@ export const Projects = () => {
     {
       id: 12,
       image: MegaBonPlan,
+      images: [MegaBonPlan],
       title: "MegaBonPlan - Partage de bons plans",
       description: "Inspiré de Dealabs, MegaBonPlan est une plateforme communautaire où les utilisateurs peuvent partager et découvrir des bons plans, codes promo et offres spéciales.",
       features: [
@@ -261,17 +279,6 @@ export const Projects = () => {
     }
   ];
 
-  // Auto-play functionality
-  useEffect(() => {
-    let interval;
-    if (isAutoPlay) {
-      interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % projects.length);
-      }, 5000); // Change slide every 5 seconds
-    }
-    return () => clearInterval(interval);
-  }, [isAutoPlay, projects.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % projects.length);
   };
@@ -284,8 +291,39 @@ export const Projects = () => {
     setCurrentSlide(index);
   };
 
-  const toggleAutoPlay = () => {
-    setIsAutoPlay(!isAutoPlay);
+  const openImageModal = (image, project) => {
+    setSelectedImage(image);
+    setSelectedProject(project);
+    setCurrentImageIndex(project.images.indexOf(image));
+    setShowImageModal(true);
+  };
+
+  const closeImageModal = () => {
+    setShowImageModal(false);
+    setSelectedImage(null);
+    setSelectedProject(null);
+    setCurrentImageIndex(0);
+  };
+
+  const nextImage = () => {
+    if (selectedProject && selectedProject.images.length > 1) {
+      const nextIndex = (currentImageIndex + 1) % selectedProject.images.length;
+      setCurrentImageIndex(nextIndex);
+      setSelectedImage(selectedProject.images[nextIndex]);
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedProject && selectedProject.images.length > 1) {
+      const prevIndex = (currentImageIndex - 1 + selectedProject.images.length) % selectedProject.images.length;
+      setCurrentImageIndex(prevIndex);
+      setSelectedImage(selectedProject.images[prevIndex]);
+    }
+  };
+
+  const goToImage = (index) => {
+    setCurrentImageIndex(index);
+    setSelectedImage(selectedProject.images[index]);
   };
 
   const renderProject = (project) => {
@@ -296,13 +334,17 @@ export const Projects = () => {
         <Card className="project-slide-card">
           <div className="project-slide-content">
             <div className="project-slide-left">
-              <div className="project-image-container">
+              <div className="project-image-container" onClick={() => openImageModal(project.image, project)}>
                 <Card.Img 
                   variant="top" 
                   src={project.image} 
                   alt={project.title}
                   className="project-slide-image"
                 />
+                <div className="image-overlay">
+                  <FaExpandAlt className="expand-icon" />
+                  <span className="expand-text">Cliquer pour agrandir</span>
+                </div>
                 {project.status === "development" && (
                   <div className="dev-badge-slide">
                     En développement
@@ -397,14 +439,6 @@ export const Projects = () => {
         <div className="projects-slider-container">
           {/* Controls */}
           <div className="slider-controls">
-            <button 
-              className="slider-control-btn autoplay-btn"
-              onClick={toggleAutoPlay}
-              title={isAutoPlay ? "Mettre en pause" : "Lecture automatique"}
-            >
-              {isAutoPlay ? <FaPause /> : <FaPlay />}
-            </button>
-            
             <div className="slide-counter">
               {currentSlide + 1} / {projects.length}
             </div>
@@ -469,6 +503,105 @@ export const Projects = () => {
             ))}
           </div>
         </div>
+
+        {/* Image Modal */}
+        <Modal 
+          show={showImageModal} 
+          onHide={closeImageModal}
+          size="xl"
+          centered
+          className="image-modal"
+        >
+          <Modal.Header className="image-modal-header">
+            <Modal.Title className="image-modal-title">
+              {selectedProject?.title}
+              {selectedProject && selectedProject.images.length > 1 && (
+                <span className="image-counter">
+                  {currentImageIndex + 1} / {selectedProject.images.length}
+                </span>
+              )}
+            </Modal.Title>
+            <button 
+              className="modal-close-btn"
+              onClick={closeImageModal}
+              aria-label="Fermer"
+            >
+              <FaTimes />
+            </button>
+          </Modal.Header>
+          <Modal.Body className="image-modal-body">
+            {selectedImage && (
+              <div className="modal-image-container">
+                {selectedProject && selectedProject.images.length > 1 && (
+                  <button 
+                    className="modal-nav-btn modal-nav-prev" 
+                    onClick={prevImage}
+                    aria-label="Image précédente"
+                  >
+                    <FaChevronLeft />
+                  </button>
+                )}
+                
+                <img 
+                  src={selectedImage} 
+                  alt={`${selectedProject?.title} - Image ${currentImageIndex + 1}`}
+                  className="modal-image"
+                />
+                
+                {selectedProject && selectedProject.images.length > 1 && (
+                  <button 
+                    className="modal-nav-btn modal-nav-next" 
+                    onClick={nextImage}
+                    aria-label="Image suivante"
+                  >
+                    <FaChevronRight />
+                  </button>
+                )}
+              </div>
+            )}
+            
+            {selectedProject && selectedProject.images.length > 1 && (
+              <div className="modal-image-indicators">
+                {selectedProject.images.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`modal-image-indicator ${index === currentImageIndex ? 'active' : ''}`}
+                    onClick={() => goToImage(index)}
+                    aria-label={`Aller à l'image ${index + 1}`}
+                  />
+                ))}
+              </div>
+            )}
+            
+            {selectedProject && (
+              <div className="modal-project-info">
+                <p className="modal-description">{selectedProject.description}</p>
+                <div className="modal-buttons">
+                  {selectedProject.githubLink && (
+                    <Button
+                      variant="primary"
+                      href={selectedProject.githubLink}
+                      target="_blank"
+                      className="modal-btn"
+                    >
+                      <DiGithubBadge /> Github
+                    </Button>
+                  )}
+                  {selectedProject.liveLink && selectedProject.liveLinkText && selectedProject.status === "completed" && (
+                    <Button
+                      variant="success"
+                      href={selectedProject.liveLink}
+                      target="_blank"
+                      className="modal-btn"
+                    >
+                      <FaLink /> {selectedProject.liveLinkText}
+                    </Button>
+                  )}
+                </div>
+              </div>
+            )}
+          </Modal.Body>
+        </Modal>
       </Container>
     </Container>
   );

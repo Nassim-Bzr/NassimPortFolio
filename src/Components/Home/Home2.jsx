@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/esm/Container";
-import Tilt from "react-parallax-tilt";
 import myImg from "../Assets/avatar.jpg";
 import "./Home.css";
 
@@ -47,9 +46,7 @@ export const Home2 = () => {
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid myImage" alt="Avatar" />
-            </Tilt>
+            <img src={myImg} className="img-fluid myImage" alt="Avatar" />
           </Col>
         </Row>
       </Container>
