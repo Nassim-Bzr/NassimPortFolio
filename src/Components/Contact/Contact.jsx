@@ -217,7 +217,7 @@ export const Contact = () => {
               </div>
               <div className="contact-card-content">
                 <h3>Email</h3>
-                <p>nassim.bouzerara@email.com</p>
+                <p>nassim.bouzerara@gmail.com</p>
               </div>
             </div>
             

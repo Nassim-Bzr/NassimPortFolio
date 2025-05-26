@@ -90,7 +90,7 @@ export const Projects = () => {
       ],
       techStack: "React, Node.js, SQL, API IA",
       techIcons: [DiReact, DiNodejs, FaHome, FaDatabase],
-      githubLink: "https://github.com/Nassim-Bzr/SmoobuV2",
+      githubLink: "https://github.com/Nassim-Bzr/ChannelManager",
       liveLink: "#",
       liveLinkText: "En développement",
       status: "development"
@@ -216,26 +216,7 @@ export const Projects = () => {
       liveLinkText: "Voir le site",
       status: "completed"
     },
-    {
-      id: 10,
-      image: Obonnesaffaires,
-      images: [Obonnesaffaires],
-      title: "Obonnesaffaires - Site E-commerce",
-      description: "Obonnesaffaires est une plateforme e-commerce développée en collaboration via Git. Le site propose une expérience d'achat en ligne simple et efficace.",
-      features: [
-        "Catalogue de produits avec filtres et recherche",
-        "Système de panier et de commande",
-        "Paiement sécurisé",
-        "Espace client pour suivre les commandes",
-        "Interface administrateur pour la gestion des produits et des commandes"
-      ],
-      techStack: "React JS, CSS, Node.js, MongoDB",
-      techIcons: [DiReact, FaCss3, DiNodejs, DiJavascript],
-      githubLink: "https://github.com/Nassim-Bzr/Obonnesaffaires",
-      liveLink: "https://obonnesaffaires.fr/",
-      liveLinkText: "Voir le site",
-      status: "completed"
-    },
+
     {
       id: 11,
       image: TiLabel,
