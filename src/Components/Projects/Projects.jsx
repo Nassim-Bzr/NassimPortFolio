@@ -17,6 +17,8 @@ import Laptop from "../Assets/laptop.png";
 import LeBonCoinAi from "../Assets/LeBonCoinAi.png";
 import CheckCalories from "../Assets/CheckCaloriesAi.png";
 import CheckCalories2 from "../Assets/CheckCaloriesAi2.png";  
+import ProjectPythonDownloadVid from "../Assets/ProjectPythonDownloadVid.png";
+import AdsAiGen from "../Assets/AdsAiGen.png";
 
 import SmoobuV2 from "../Assets/SmoobuV2.png";
 
@@ -257,6 +259,48 @@ export const Projects = () => {
       liveLink: null,
       liveLinkText: null,
       status: "completed"
+    },
+    {
+      id: 13,
+      image: ProjectPythonDownloadVid,
+      images: [ProjectPythonDownloadVid],
+      title: "Video Downloader - Téléchargeur de vidéos multiplateforme",
+      description: "Video Downloader est une application de téléchargement de vidéos qui permet de télécharger facilement des vidéos depuis YouTube, Twitter, Instagram et Facebook avec une interface intuitive en français.",
+      features: [
+        "Téléchargement depuis YouTube, Twitter, Instagram et Facebook",
+        "Interface utilisateur intuitive et moderne en français",
+        "Détection automatique de la plateforme via l'URL",
+        "Historique des téléchargements avec informations détaillées",
+        "Prévisualisation des informations de la vidéo avant téléchargement",
+        "Support de différents formats et qualités de vidéo"
+      ],
+      techStack: "Python, Tkinter/PyQt, yt-dlp, Requests",
+      techIcons: [DiNodejs, FaServer, FaDatabase, FaCode],
+      githubLink: "https://github.com/Nassim-Bzr/VideoDownloader",
+      liveLink: null,
+      liveLinkText: null,
+      status: "completed"
+    },
+    {
+      id: 14,
+      image: AdsAiGen,
+      images: [AdsAiGen],
+      title: "Générateur de Publicités IA - Création d'images publicitaires automatisée",
+      description: "Générateur de Publicités IA est une plateforme innovante qui permet de créer des images publicitaires professionnelles en quelques secondes grâce à l'intelligence artificielle. Il suffit de décrire votre produit pour obtenir des visuels marketing de qualité.",
+      features: [
+        "Génération automatique d'images publicitaires par IA",
+        "Interface intuitive pour décrire le produit et ses bénéfices",
+        "Création de visuels marketing professionnels en quelques secondes",
+        "Personnalisation selon le type de produit (tech, mode, automobile, etc.)",
+        "Export haute qualité pour différents supports publicitaires",
+        "Optimisation automatique pour différents formats et plateformes"
+      ],
+      techStack: "React, Node.js, API IA (DALL-E/Midjourney), TypeScript",
+      techIcons: [DiReact, DiNodejs, FaRobot, SiTypescript],
+      githubLink: "https://github.com/Nassim-Bzr/AdsAiGenerator",
+      liveLink: "#",
+      liveLinkText: "En développement",
+      status: "development"
     }
   ];
 
